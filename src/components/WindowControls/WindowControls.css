@@ -1,0 +1,189 @@
+/*** Mac Traffic Light Style ***/
+.traffic-lights {
+    top: 1px;
+    left: 8px;
+}
+
+.focus .traffic-lights > .traffic-light-close, 
+.traffic-lights:hover > .traffic-light-close, 
+.traffic-lights:active > .traffic-light-close {
+    background : #ff6159;
+}
+
+.focus .traffic-lights > .traffic-light-close:active:hover,
+.traffic-lights:hover > .traffic-light-close:active:hover,
+.traffic-lights:active > .traffic-light-close:active:hover {
+    background : #bf4942;
+}
+
+.focus .traffic-lights > .traffic-light-minimize, 
+.traffic-lights:hover > .traffic-light-minimize, 
+.traffic-lights:active > .traffic-light-minimize {
+    background : #ffbd2e;
+}
+
+.focus .traffic-lights > .traffic-light-minimize:active:hover,
+.traffic-lights:hover > .traffic-light-minimize:active:hover,
+.traffic-lights:active > .traffic-light-minimize:active:hover {
+    background : #bf8e22;
+}
+
+.focus .traffic-lights > .traffic-light-maximize, 
+.traffic-lights:hover > .traffic-light-maximize,
+.traffic-lights:active > .traffic-light-maximize {
+    background: #28c941;
+}
+
+.focus .traffic-lights > .traffic-light-maximize:active:hover,
+.traffic-lights:hover > .traffic-light-maximize:active:hover,
+.traffic-lights:active > .traffic-light-maximize:active:hover {
+    background : #1d9730;
+}
+
+.traffic-lights > .traffic-light:before, 
+.traffic-lights > .traffic-light:after {
+    visibility: hidden;
+}
+
+.traffic-lights:hover > .traffic-light:before, 
+.traffic-lights:hover > .traffic-light:after,
+.traffic-lights:active > .traffic-light:before, 
+.traffic-lights:active > .traffic-light:after {
+    visibility: visible;
+}
+  
+.traffic-light {
+    border-radius: 100%;
+    padding: 0;
+    height: 12px;
+    width: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    margin-right: 3.5px;
+    background-color: #ddd;
+    position: relative;
+    outline: none;
+}
+
+.traffic-light:before,
+.traffic-light:after {
+    content: '';
+    position: absolute;
+    border-radius: 1px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.traffic-light-close:before, 
+.traffic-light-close:after {
+    background : #4d0000;
+    width: 8px;
+    height: 1px;
+}
+
+.traffic-light-close:before {
+    transform: rotate(45deg);
+}
+
+.traffic-light-close:after {
+    transform: rotate(-45deg);
+}
+
+.traffic-light-close:active:hover:before, .traffic-light-close:active:hover:after {
+    background : #190000;
+}
+
+.traffic-light-minimize:before {
+    background: #995700;
+    width: 8px;
+    height: 1px;
+}
+
+.traffic-light-minimize:active:hover:before {
+    background: #592800;
+}
+
+.traffic-light-maximize:before {
+    background : #006500;
+    width: 6px;
+    height: 6px;
+}
+
+.traffic-light-maximize:after {
+    background : #28c941;
+    width: 10px;
+    height: 2px;
+    transform: rotate(45deg);
+}
+
+.traffic-light-maximize:active:hover:before {
+    background : #003200;
+}
+
+.traffic-light-maximize:active:hover:after {
+    background : #1d9730;
+}
+
+/*** Window Style close Buttons ***/
+.wc div {
+    position: relative;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.wc div:before,
+.wc div:after {
+  top: 30%;
+  right: 30%;
+  bottom: 30%;
+  left: 30%;
+  content: " ";
+  position: absolute;
+  border-color: #CCCCCC;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
+
+.wc .minimize:before {
+    border-bottom-width: 2px;
+}
+
+.wc .maximize:before {
+    border-width: 1px 1px 2px 1px;
+}
+  
+.wc .close:before,
+.wc .close:after {
+    bottom: 50%;
+    top: 50%;
+}
+  
+.wc .close:before {
+    transform: rotate(45deg);
+}
+  
+.wc .close:after {
+    transform: rotate(-45deg);
+}
+  
+.wc div:hover {
+    background-color: #CCCCCC;
+}
+  
+.wc .close:hover {
+    background-color: #E04343;
+}
+  
+.wc div:hover:after,
+.wc div:hover:before {
+    border-color: #333333;
+}
+  
+.wc .close:hover:after,
+.wc .close:hover:before {
+    border-color: #FFFFFF;
+}
